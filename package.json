@@ -1,0 +1,22 @@
+{
+  "name": "express-custom-examples",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "prettier.config.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "precommit:js-cjs": "cd javascript-cjs && npm run precommit",
+    "precommit:js-esm": "cd javascript-esm && npm run precommit",
+    "precommit:ts-esm": "cd typescript-esm && npm run precommit",
+    "precommit:ts-cjs": "cd typescript-cjs && npm run precommit",
+    "precommit": "npm run format"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8"
+  }
+}
