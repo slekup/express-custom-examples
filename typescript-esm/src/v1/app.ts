@@ -1,18 +1,21 @@
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { VersionBuilder } from 'express-custom';
+import { Version } from 'express-custom';
 import helmet from 'helmet';
 import hpp from 'hpp';
 
-import userRouter from './routes';
+import userGroup from './routes';
 
-const version = new VersionBuilder({
+const version = new Version({
   version: 1,
 });
 
 version.addMiddleware((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://example.com');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  );
   res.header('Access-Control-Allow-Credentials', 'true');
   if (req.method === 'OPTIONS') {
     res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
@@ -24,7 +27,9 @@ version.addMiddleware((req, res, next) => {
 
 version.addMiddleware(helmet());
 version.addMiddleware(bodyParser.json({ limit: '100mb' }));
-version.addMiddleware(bodyParser.urlencoded({ limit: '100mb', extended: true }));
+version.addMiddleware(
+  bodyParser.urlencoded({ limit: '100mb', extended: true })
+);
 version.addMiddleware(hpp());
 
 version.addMiddleware(
@@ -36,6 +41,6 @@ version.addMiddleware(
   })
 );
 
-version.addRouter(userRouter);
+version.addGroup(userGroup);
 
 export default version;

@@ -8,11 +8,11 @@ import { logger } from './utils';
 const port = process.env.PORT ?? 5000;
 
 // Start the server
-const server = api.startServer(() => {
+const server = api.start(() => {
   logger.info(`Server started on port ${port}`);
 });
 
 // Handle server errors
-server.on('error', (error) => {
+server.on('error', (error: string) => {
   logger.error(error);
 });

@@ -8,7 +8,7 @@
     {
       "category": "Introduction",
       "slug": "introduction",
-      "basePath": "./public-docs",
+      "basePath": "../public-docs",
       "files": ["getting-started"]
     }
   ]

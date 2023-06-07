@@ -1,12 +1,15 @@
-import { ApiBuilder } from 'express-custom';
+import { Api } from 'express-custom';
 
 import v1 from '@v1/app';
 
 const port = process.env.PORT ?? 5000;
 
 // Create the API instance
-const api = new ApiBuilder({
-  baseUrl: process.env.NODE_ENV === 'prod' ? 'https://api.example.com' : 'http://localhost:5000',
+const api = new Api({
+  url:
+    process.env.NODE_ENV === 'prod'
+      ? 'https://api.example.com'
+      : 'http://localhost:5000',
   port: parseInt(String(port), 10),
 });
 

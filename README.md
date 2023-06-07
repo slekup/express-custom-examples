@@ -18,6 +18,10 @@ Enhance your express app with builders, Next.js documentation, schema validation
 
 ### Progress:
 
+- `❌` - Incomplete
+- `⚠️` - In progress
+- `✅` - Complete
+
 | Example          | Status |
 | ---------------- | ------ |
 | JavaScript (ESM) | ❌     |

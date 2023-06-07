@@ -1,8 +1,8 @@
-import { RouterBuilder } from 'express-custom';
+import { Group } from 'express-custom';
 
-const userRouter = new RouterBuilder({
+const userGroup = new Group({
   name: 'User Endpoints',
   path: '/user',
 });
 
-export default userRouter;
+export default userGroup;

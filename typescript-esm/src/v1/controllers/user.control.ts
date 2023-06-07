@@ -1,15 +1,21 @@
 import { Request } from 'express';
-import { EndpointBuilder } from 'express-custom';
+import { Endpoint } from 'express-custom';
 
 interface UserRequest extends Request {
   user: object;
 }
 
-export const loginEndpoint = new EndpointBuilder({
+export const loginEndpoint = new Endpoint({
   name: 'Login',
   description: 'Login to your account',
   path: '/login',
   method: 'POST',
-}).setController((req, res) => {
-  res.json({ user: (req as UserRequest).user });
+  /**
+   * Handler for the endpoint.
+   * @param req The request.
+   * @param res The response.
+   */
+  controller: (req, res) => {
+    res.json({ user: (req as UserRequest).user });
+  },
 });
