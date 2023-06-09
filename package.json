@@ -1,7 +1,6 @@
 {
   "name": "express-custom-examples",
   "version": "1.0.0",
-  "description": "<div align=\"center\">",
   "main": "prettier.config.js",
   "scripts": {
     "format": "prettier --write \"*/src/**/*.ts\"",
@@ -12,8 +11,7 @@
     "precommit:ts-cjs": "cd typescript-cjs && npm run precommit",
     "precommit": "npm run format && npm run precommit:js-cjs && npm run precommit:js-esm && npm run precommit:ts-esm && npm run precommit:ts-cjs"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Slekup",
   "license": "ISC",
   "dependencies": {
     "husky": "^8.0.3",

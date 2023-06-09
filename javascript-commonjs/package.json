@@ -1,0 +1,35 @@
+{
+  "name": "javascript-cjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Slekup",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@v1": "src/v1",
+    "@v2": "src/v2"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "express-custom": "^0.0.7",
+    "module-alias": "^2.2.3",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.8",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^46.2.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "rimraf": "^5.0.1"
+  }
+}
